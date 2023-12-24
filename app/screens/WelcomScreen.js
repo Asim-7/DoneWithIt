@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import colors from "../config/Colors.js";
 
 function WelcomScreen({ navigation }) {
   const imageUrl = "https://picsum.photos/500/800";
@@ -58,14 +59,14 @@ const styles = StyleSheet.create({
   loginButton: {
     width: "100%",
     height: 70,
-    backgroundColor: "#fc5c65",
+    backgroundColor: colors.primary,
     justifyContent: "center",
     alignItems: "center",
   },
   registerButton: {
     width: "100%",
     height: 70,
-    backgroundColor: "#4ecdc4",
+    backgroundColor: colors.secondary,
   },
 });
 
