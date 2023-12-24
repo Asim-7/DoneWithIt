@@ -15,14 +15,16 @@ function WelcomScreen({ navigation }) {
     <ImageBackground source={{ uri: imageUrl }} style={styles.background}>
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require("../assets/icon.png")} />
-        <Text>Sell what we don't need</Text>
+        <Text style={[styles.text, styles.spaceTop]}>
+          Sell what we don't need
+        </Text>
       </View>
 
       <TouchableOpacity
         style={styles.loginButton}
         onPress={() => navigation.navigate("Details")}
       >
-        <View />
+        <Text style={styles.text}>Go to next screen</Text>
       </TouchableOpacity>
       <View style={styles.registerButton} />
     </ImageBackground>
@@ -37,6 +39,13 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end", // used for y-axis alignment
     alignItems: "center", // used for x-axis alignment
   },
+  spaceTop: {
+    top: 10,
+  },
+  text: {
+    color: "white",
+    fontWeight: "bold",
+  },
   logoContainer: {
     position: "absolute",
     top: 70,
@@ -50,6 +59,8 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 70,
     backgroundColor: "#fc5c65",
+    justifyContent: "center",
+    alignItems: "center",
   },
   registerButton: {
     width: "100%",
