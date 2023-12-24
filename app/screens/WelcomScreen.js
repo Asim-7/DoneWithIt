@@ -1,7 +1,14 @@
 import React from "react";
-import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
+import {
+  Image,
+  ImageBackground,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
-function WelcomScreen(props) {
+function WelcomScreen({ navigation }) {
   const imageUrl = "https://picsum.photos/500/800";
 
   return (
@@ -11,7 +18,12 @@ function WelcomScreen(props) {
         <Text>Sell what we don't need</Text>
       </View>
 
-      <View style={styles.loginButton} />
+      <TouchableOpacity
+        style={styles.loginButton}
+        onPress={() => navigation.navigate("Details")}
+      >
+        <View />
+      </TouchableOpacity>
       <View style={styles.registerButton} />
     </ImageBackground>
   );
